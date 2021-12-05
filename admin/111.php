@@ -11,7 +11,7 @@
 </head>
 <body>
   <!-- 内容 -->
-  <div class="container mt-5 ">
+  <div class="container mt-5">
     <div class="row">
       <form method="post" enctype="multipart/form-data">
         <div class="col-2">
