@@ -69,16 +69,14 @@ $blog = json_decode($redis->get($id));
         </div>
       </div>
 
-      <div class="row mt-3 p-0">
-        <div id="vcomments"></div>
-          <script>
-              new Valine({
-                  el: '#vcomments',
-                  appId: 'sc2cstLjwuGgaSQg13jSL8uw-gzGzoHsz',
-                  appKey: 'Ic3ysGI0sGTkSrxsNVr3NdVg'
-              })
-          </script>
-        </div>
+      <div id="vcomments mt-3"></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'sc2cstLjwuGgaSQg13jSL8uw-gzGzoHsz',
+                appKey: 'Ic3ysGI0sGTkSrxsNVr3NdVg'
+            })
+        </script>
       </div>
 
   </div>
