@@ -6,6 +6,7 @@
     $id = $_GET['id'];
     $blog = json_decode($redis->get($id));
 
+    // 回收类别
     $familyName = "family-".$blog->family;
     $redis->srem($familyName, $id);
     
@@ -14,7 +15,16 @@
         $redis->srem("familylist", $blog->family);
     }
 
-    $redis->srem("bloglist",$id);
+    // 回收归档
+    $archiveName = "archive-" . gmdate("Y-m", strtotime($blog->time));
+    $redis->lrem($archiveName,$id);
+    
+    if ($redis->llen($archiveName) == 0) {
+        $redis->del($archiveName);
+        $redis->srem("archivelist",gmdate("Y-m", strtotime($blog->time)));
+    }
+
+    $redis->lrem("bloglist",$id);
     $redis->del($id);
 
     header("location:/admin/adminlink.php");

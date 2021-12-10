@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Bloglist</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -35,11 +35,19 @@
   $redis->connect('127.0.0.1', 6379);
 
   $familyName = $_GET["family"];
+  $archiveDate = $_GET["archiveDate"];
+  
   if ($familyName != "") {
-    $blogs = $redis->smembers("family-" . $familyName);
-  } else {
-    $blogs = $redis->smembers('bloglist');
+    $blogs = $redis->lrange("family-" . $familyName,0,-1);
   }
+  else if($archiveDate != "") {
+    $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
+  }
+  else {
+    $blogs = $redis->lrange('bloglist',0,-1);
+  }
+
+  $familys = $redis->smembers("familylist");
   ?>
 
   <?php require "../compoments/header.php"; ?>
@@ -47,7 +55,12 @@
   <!-- 内容 -->
   <div class="container mt-5 pt-3">
 
-    <?php require "../compoments/family.php" ?>
+  <div class="row">
+
+    <div class="col-3">
+      <?php require "../compoments/family.php" ?>
+      <?php require "../compoments/archiveDate.php" ?>
+    </div>
 
     <!-- $blogs  -->
 

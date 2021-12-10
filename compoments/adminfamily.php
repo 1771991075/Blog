@@ -19,7 +19,7 @@ $familys = $redis->smembers("familylist");
         <div>
             <?php for ($i = 0; $i < count($familys); $i++) { ?>
 
-                <a href="/home/link.php?family=<?php echo $familys[$i] ?>" class="btn btn-primary mt-1 mb-1 me-2" style="float:left background-color:#0d6efd">
+                <a href="/admin/adminlink.php?family=<?php echo $familys[$i] ?>" class="btn btn-primary mt-1 mb-1 me-2" style="float:left background-color:#0d6efd">
                     <?php echo $familys[$i] ?>
                 </a>
             <?php } ?>

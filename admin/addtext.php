@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Publish Blog</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="//cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
@@ -111,6 +111,8 @@
     $blog->content = $_POST["content"];
     $blog->time = date("Y/m/d H:i:s");
 
+    $archiveDate = date("Y-m");
+
     if ($_POST["title"] == "" || $_POST["family"] == "" ||  $_POST["summary"] == "" || $_POST["content"] == "") {
       echo "<script>
                 alert('数据不完善。')
@@ -119,10 +121,13 @@
     }
 
     $redis->set($guid, json_encode($blog));
-    $redis->sadd("bloglist", $guid);
+    $redis->lpush("bloglist",$guid);
 
     $redis->sadd("familylist", $blog->family);
-    $redis->sadd("family-" . $blog->family, $guid);
+    $redis->lpush("family-" . $blog->family,$guid);
+
+    $redis->sadd("archivelist",$archiveDate);
+    $redis->lpush("archive-" . $archiveDate,$guid);
 
     echo "<script>
                 alert('提交成功!')
