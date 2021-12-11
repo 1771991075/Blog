@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
+<link rel="stylesheet" href="./static/css/style-an.css" />
 <style>
   .link_1:hover {
     color: rgb(6, 156, 206);
@@ -45,6 +46,14 @@
 
   <!-- 背景图 -->
   <div class="container-fulid">
+    <a class="an">
+      <span>
+        <svg onclick="window.scrollTo(0,775);" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z"/>
+        </svg>
+      </span>
+    </a>
+
     <div class="row m-0" style="height: 100vh; background-image: linear-gradient(to right top, #3d3d3d, #424352, #414b68, #36547f, #0a5f96);">
       <h1 class="mt-5"></h1>
     </div>
