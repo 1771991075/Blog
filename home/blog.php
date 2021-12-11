@@ -20,22 +20,8 @@ $blog = json_decode($redis->get($id));
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/valine@1.4.16/dist/Valine.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
 </head>
-
-<style>
-  .link_1:hover {
-    color: rgb(6, 156, 206);
-  }
-
-  .link_1:hover {
-    text-decoration-line: underline;
-  }
-
-  .link_1 {
-    text-decoration-line: none;
-    color: rgb(0, 0, 0);
-  }
-</style>
 
 <body>
 

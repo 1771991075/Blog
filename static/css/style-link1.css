@@ -1,0 +1,13 @@
+/* 页脚 */
+.link_1:hover {
+    color: rgb(6, 156, 206);
+}
+
+.link_1:hover {
+    text-decoration-line: underline;
+}
+
+.link_1 {
+    text-decoration-line: none;
+    color: rgb(0, 0, 0);
+}
