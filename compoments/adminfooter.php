@@ -1,4 +1,18 @@
 <!-- 页脚 -->
+<link rel="stylesheet" href="../static/css/style-an.css" />
+
+<script>
+  window.onscroll = function(){
+    var btn_top = document.getElementById("scroll2Top");
+    if(window.scrollY > 400){
+        btn_top.removeAttribute("hidden");
+    }
+    else{
+        btn_top.setAttribute("hidden","hidden");
+    }
+  }
+</script>
+
 <footer class="mt-3 p-4" style="background-color: whitesmoke;">
   <div class="container mt-4">
     <div class="row">
@@ -59,3 +73,9 @@
     </div>
   </div>
 </footer>
+
+<div id="scroll2Top" hidden="hidden" class="scrollto" onclick="window.scrollTo(0,0)">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+  </svg>
+</div>

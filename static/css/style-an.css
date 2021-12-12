@@ -6,3 +6,23 @@
     margin-left: -25px;
     cursor: pointer;
 }
+.scrollto{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(160, 160, 160);
+    width: 46px;
+    height: 46px;
+    margin: 20px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+}
+
+.scrollto:hover{
+    background-color: rgb(124, 124, 124);
+}
+
+.scrollto svg{
+    padding-top: 4px;
+}

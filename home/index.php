@@ -8,7 +8,8 @@
   <title>index</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="../static/css/style-an.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"/>
+  
   <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
 </head>
 
@@ -34,8 +35,8 @@
   <div class="container-fulid">
     <a class="an">
       <span>
-        <svg onclick="window.scrollTo(0,775);" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z"/>
+        <svg onclick="window.scrollTo(0,775);" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-chevron-compact-down animate__animated animate__bounce animate__slow animate__infinite" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
         </svg>
       </span>
     </a>

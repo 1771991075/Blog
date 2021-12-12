@@ -61,8 +61,9 @@ $blog = json_decode($redis->get($id));
           new Valine({
               el: '#vcomments',
               appId: 'sc2cstLjwuGgaSQg13jSL8uw-gzGzoHsz',
-              appKey: 'Ic3ysGI0sGTkSrxsNVr3NdVg'
-          })
+              appKey: 'Ic3ysGI0sGTkSrxsNVr3NdVg',
+              path: "<?php echo $id; ?>"
+          });
       </script>
     </div>
 
