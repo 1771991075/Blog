@@ -10,53 +10,39 @@
   <title>Bloglist</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
 </head>
-
-<style>
-  .link_1:hover {
-    color: rgb(6, 156, 206);
-  }
-
-  .link_1:hover {
-    text-decoration-line: underline;
-  }
-
-  .link_1 {
-    text-decoration-line: none;
-    color: rgb(0, 0, 0);
-  }
-</style>
 
 <body>
 
-  <?php
+<?php
 
-  require "../models/model.php";
+require "../models/model.php";
 
-  $redis = new Redis();
-  $redis->connect('127.0.0.1', 6379);
+$redis = new Redis();
+$redis->connect('127.0.0.1', 6379);
 
-  $familyName = $_GET["family"];
-  $archiveDate = $_GET["archiveDate"];
+$familyName = $_GET["family"];
+$archiveDate = $_GET["archiveDate"];
 
-  if ($familyName != "") {
-    $blogs = $redis->lrange("family-" . $familyName,0,-1);
-  } 
-  else if($archiveDate != "") {
-    $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
-  }
-  else {
-    $blogs = $redis->lrange('bloglist',0,-1);
-  }
+if ($familyName != "") {
+  $blogs = $redis->lrange("family-" . $familyName,0,-1);
+} 
+else if($archiveDate != "") {
+  $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
+}
+else {
+  $blogs = $redis->lrange('bloglist',0,-1);
+}
 
-  $familys = $redis->smembers("familylist");
+$familys = $redis->smembers("familylist");
 
-  ?>
+?>
 
-  <?php require "../compoments/adminheader.php"; ?>
+<?php require "../compoments/adminheader.php"; ?>
 
   <!-- 内容 -->
-  <div class="container mt-5 pt-3">
+<div class="container mt-5 pt-3">
 
   <div class="row">
 
@@ -64,9 +50,7 @@
       <?php require "../compoments/adminfamily.php" ?>
       <?php require "../compoments/adminarchiveDate.php" ?>
     </div>
-
       <!-- $blogs  -->
-
       <div class="col">
 
         <?php for ($i = 0; $i < count($blogs); $i++) { ?>
@@ -103,14 +87,13 @@
               </div>
             </div>
           </div>
-
         <?php } ?>
 
       </div>
-
   </div>
+</div>
 
-  <?php require "../compoments/adminfooter.php"; ?>
+<?php require "../compoments/adminfooter.php"; ?>
 
 </body>
 

@@ -8,23 +8,9 @@
   <title>index</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../static/css/style-an.css" />
+  <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
 </head>
-
-<link rel="stylesheet" href="./static/css/style-an.css" />
-<style>
-  .link_1:hover {
-    color: rgb(6, 156, 206);
-  }
-
-  .link_1:hover {
-    text-decoration-line: underline;
-  }
-
-  .link_1 {
-    text-decoration-line: none;
-    color: rgb(0, 0, 0);
-  }
-</style>
 
 <body>
   <?php
