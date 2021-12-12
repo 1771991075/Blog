@@ -94,4 +94,4 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
-<script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" skin="player" lr="l" m="1"></script>
+<script src="https://myhkw.cn/api/player/1639315267136" id="myhk" key="1639315267136" m="1"></script>
