@@ -22,11 +22,15 @@
 
     $familyName = $_GET["family"];
     $archiveDate = $_GET["archiveDate"];
+
+    $keyWord = "All Blogs";
     
     if ($familyName != "") {
+      $keyWord = $familyName;
       $blogs = $redis->lrange("family-" . $familyName,0,-1);
     }
     else if($archiveDate != "") {
+      $keyWord = $archiveDate;
       $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
     }
     else {
@@ -39,7 +43,7 @@
   <?php require "../compoments/header.php"; ?>
 
   <!-- 内容 -->
-  <div class="container mt-5 pt-3">
+  <div class="container mt-5 pt-4">
 
   <div class="row">
 
@@ -51,6 +55,9 @@
     <!-- $blogs  -->
 
     <div class="col">
+
+      <h1 class="mb-3"><?php echo $keyWord; ?></h1>
+      <hr>
 
       <?php for ($i = 0; $i < count($blogs); $i++) { ?>
         <?php $blog = json_decode($redis->get($blogs[$i])); ?>
