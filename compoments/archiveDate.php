@@ -21,6 +21,8 @@ $archiveDates = $redis->smembers("archivelist");
 
                 <a href="/home/link.php?archiveDate=<?php echo $archiveDates[$i] ?>" class="btn btn-primary mt-1 mb-1 me-2" style="float:left background-color:#0d6efd">
                     <?php echo $archiveDates[$i] ?>
+                    <span class="badge bg-secondary"><?php echo $redis->llen("archive-" . $archiveDates[$i]) ?>
+                    </span>
                 </a>
             <?php } ?>
         </div>
