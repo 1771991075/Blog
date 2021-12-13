@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/static/css/header.css" />
+
 <?php
     $redis = new Redis();
     $redis->connect('127.0.0.1', 6379);
@@ -5,7 +7,7 @@
 ?>
 
 <!-- 导航栏 -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="/">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +42,7 @@
                     <a class="nav-link" href="/home/other.php">Other</a>
                 </li>
             </ul>
-            <form class="d-flex">
+            <form id="search" class="d-flex">
                 <a href="/admin"><button type="button" class="btn btn-outline-success me-2">Login</button></a>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>

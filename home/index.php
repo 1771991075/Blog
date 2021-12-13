@@ -40,21 +40,14 @@
       </span>
     </a>
 
-    <div class="row m-0" style="height: 100vh; background-image: linear-gradient(to right top, #3d3d3d, #424352, #414b68, #36547f, #0a5f96);">
-      <h1 class="mt-5"></h1>
+    <div id="background" class="row m-0" style="height: 100vh;">
+      <?php require "../compoments/background.php"; ?>
     </div>
   </div>
 
   <!-- 内容 -->
-  <div class="container">
+  <div class="container pt-5">
 
-    <div class="row ">
-      <nav class="navbar navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Content</a>
-        </div>
-      </nav>
-    </div>
     <div class="row">
       <div class="col">
         <div class="row">
