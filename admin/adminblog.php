@@ -26,14 +26,14 @@ $blog = json_decode($redis->get($id));
 
 <body>
 
-  <?php require "../compoments/adminheader.php"; ?>
+<?php 
+  $currentPage = "adminblog";
+  require "../compoments/adminheader.php"; 
+?>
 
   <!-- 内容 -->
-<div class="container mt-5 pt-3">
+<div class="container pt-3" style="padding-left: 280px;">
   <div class="row">
-    <div class="col-3">
-      <?php require "../compoments/adminfamily.php" ?>
-    </div>
     <!-- $blogs  -->
 
     <div class="col">
@@ -59,11 +59,14 @@ $blog = json_decode($redis->get($id));
 
     </div>
 
+    <div class="col-3">
+      <?php require "../compoments/adminfamily.php" ?>
+      <?php require "../compoments/adminarchiveDate.php" ?>
+    </div>
+
   </div>
 
 </div>
-
-<?php require "../compoments/adminfooter.php"; ?>
 
 </body>
 

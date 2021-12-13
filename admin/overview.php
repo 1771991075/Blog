@@ -14,64 +14,10 @@
 </head>
 
 <body>
-
-  <?php
-
-  require "../models/model.php";
-
-  $redis = new Redis();
-  $redis->connect('127.0.0.1', 6379);
-
-  $familyName = $_GET["family"];
-  if ($familyName != "") {
-    $blogs = $redis->smembers("family-" . $familyName);
-  } else {
-    $blogs = $redis->smembers('bloglist');
-  }
-
-  $familys = $redis->smembers("familylist");
-
+  <?php 
+    $currentPage = "overview";
+    require "../compoments/adminheader.php"; 
   ?>
-
-  <?php require "../compoments/adminheader.php"; ?>
-
-  <!-- 内容 -->
-  <div class="container mt-5 pt-3">
-    
-      <?php require "../compoments/user.php"; ?> 
-        
-      <!-- $blogs  -->
-
-      <div class="col-9">
-        <?php for ($i = 0; $i < count($blogs); $i++) { ?>
-          <?php $blog = json_decode($redis->get($blogs[$i])); ?>
-
-          <div class="row mb-2">
-            <div class="card p-0">
-              <h5 class="card-header">
-                <?php echo $blog->title ?>
-              </h5>
-              <div class="card-body">
-                <p class="card-title">
-                  <?php echo $blog->time ?> | <?php echo $blog->family ?>
-                </p>
-                <p class="card-text">
-                  <?php echo $blog->summary ?>
-                </p>
-                <a href="/admin/adminblog.php?id=<?php echo $blogs[$i] ?>" class="btn btn-primary">details</a>
-                <a href="/admin/alter.php?id=<?php echo $blogs[$i] ?>" class="btn btn-warning">alter</a>
-                <a href="/admin/adminblog.php?id=<?php echo $blogs[$i] ?>" class="btn btn-danger">delete</a>
-              </div>
-            </div>
-          </div>
-        <?php } ?>
-      </div>
-
-    </div>
-
-  </div>
-
-  <?php require "../compoments/adminfooter.php"; ?>
 
 </body>
 

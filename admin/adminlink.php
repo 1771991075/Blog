@@ -25,10 +25,14 @@ $redis->connect('127.0.0.1', 6379);
 $familyName = $_GET["family"];
 $archiveDate = $_GET["archiveDate"];
 
+$keyWord = "All Blogs";
+
 if ($familyName != "") {
+  $keyWord = $familyName;
   $blogs = $redis->lrange("family-" . $familyName,0,-1);
 } 
 else if($archiveDate != "") {
+  $keyWord = $archiveDate;
   $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
 }
 else {
@@ -39,17 +43,18 @@ $familys = $redis->smembers("familylist");
 
 ?>
 
-<?php require "../compoments/adminheader.php"; ?>
+<?php 
+  $currentPage = "adminlink";
+  require "../compoments/adminheader.php"; 
+?>
 
   <!-- 内容 -->
-<div class="container mt-5 pt-3">
+<div class="container pt-3" style="padding-left: 280px;">
 
   <div class="row">
 
-    <div class="col-3">
-      <?php require "../compoments/adminfamily.php" ?>
-      <?php require "../compoments/adminarchiveDate.php" ?>
-    </div>
+      <h1 class="mb-3"><?php echo $keyWord; ?></h1>
+      <hr>
       <!-- $blogs  -->
       <div class="col">
 
@@ -90,10 +95,14 @@ $familys = $redis->smembers("familylist");
         <?php } ?>
 
       </div>
+
+    <div class="col-3">
+      <?php require "../compoments/adminfamily.php" ?>
+      <?php require "../compoments/adminarchiveDate.php" ?>
+    </div>
+
   </div>
 </div>
-
-<?php require "../compoments/adminfooter.php"; ?>
 
 </body>
 

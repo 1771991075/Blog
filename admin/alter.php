@@ -25,10 +25,13 @@
 
 <body>
 
-  <?php require "../compoments/adminheader.php"; ?>
+  <?php 
+    $currentPage = "alter";
+    require "../compoments/adminheader.php"; 
+  ?>
 
   <!-- 内容 -->
-  <div class="container mt-5 ">
+  <div class="container" style="padding-left: 280px;">
     <div class="row">
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -38,7 +41,7 @@
             <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
             <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
           </svg>
-            Alter
+            Alter Blog
           </a>
         </div>
       </nav>
@@ -50,19 +53,20 @@
             <input name="id" type="hidden" value="<?php echo $id ?>" />
             <input name="time" type="hidden" value="<?php echo $blog->time ?>" />
 
-            <label class="form-label">title</label>
+            <label class="form-label">Title</label>
             <input name="title" type="text" value="<?php echo $blog->title ?>" class="form-control">
           </div>
           <div class="mb-2">
-            <label class="form-label">family</label>
+            <label class="form-label">Family</label>
             <input name="family" type="text" readonly value="<?php echo $blog->family ?>" class="form-control">
           </div>
           <div class="mb-2">
-            <label class="form-label">summary</label>
+            <label class="form-label">Summary</label>
             <input name="summary" type="text"  value="<?php echo $blog->summary ?>" class="form-control">
           </div>
         </div>
         <div class="row-12">
+          <label class="form-label">Content</label>
           <textarea name="content"><?php echo $blog->content ?></textarea>
           <script>
             CKEDITOR.replace('content');
