@@ -13,28 +13,28 @@
 
 <body>
 
-  <?php
+<?php
 
-  require "../models/model.php";
+    require "../models/model.php";
 
-  $redis = new Redis();
-  $redis->connect('127.0.0.1', 6379);
+    $redis = new Redis();
+    $redis->connect('127.0.0.1', 6379);
 
-  $familyName = $_GET["family"];
-  $archiveDate = $_GET["archiveDate"];
-  
-  if ($familyName != "") {
-    $blogs = $redis->lrange("family-" . $familyName,0,-1);
-  }
-  else if($archiveDate != "") {
-    $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
-  }
-  else {
-    $blogs = $redis->lrange('bloglist',0,-1);
-  }
+    $familyName = $_GET["family"];
+    $archiveDate = $_GET["archiveDate"];
+    
+    if ($familyName != "") {
+      $blogs = $redis->lrange("family-" . $familyName,0,-1);
+    }
+    else if($archiveDate != "") {
+      $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
+    }
+    else {
+      $blogs = $redis->lrange('bloglist',0,-1);
+    }
 
-  $familys = $redis->smembers("familylist");
-  ?>
+    $familys = $redis->smembers("familylist");
+?>
 
   <?php require "../compoments/header.php"; ?>
 
