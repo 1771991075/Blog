@@ -49,7 +49,7 @@
   <div class="container pt-5">
 
     <div class="row">
-      <div class="col">
+      <div class="col-lg">
         <div class="row">
           <?php $blog = json_decode($redis->get($blogs[0])); ?>
           <div class="card mb-3">
@@ -75,11 +75,11 @@
         </div>
       </div>
 
-      <div class="col">
+      <div class="col-lg">
         <div class="row">
         <?php $blog = json_decode($redis->get($blogs[2])); ?>
-          <div class="col-6 mb-1">
-            <div class="card" style="width: 18rem;">
+          <div class="col-md-6 mb-1">
+            <div class="card">
               <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
@@ -90,8 +90,8 @@
           </div>
 
           <?php $blog = json_decode($redis->get($blogs[3])); ?>
-          <div class="col-6 mb-1">
-            <div class="card" style="width: 18rem;">
+          <div class="col-md-6 mb-1">
+            <div class="card">
               <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
@@ -102,8 +102,8 @@
           </div>
 
           <?php $blog = json_decode($redis->get($blogs[4])); ?>
-          <div class="col-6 mb-1">
-            <div class="card" style="width: 18rem;">
+          <div class="col-md-6 mb-1">
+            <div class="card">
               <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
@@ -114,8 +114,8 @@
           </div>
 
           <?php $blog = json_decode($redis->get($blogs[5])); ?>
-          <div class="col-6 mb-1">
-            <div class="card" style="width: 18rem;">
+          <div class="col-md-6 mb-1">
+            <div class="card">
               <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>

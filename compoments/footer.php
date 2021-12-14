@@ -16,27 +16,27 @@
 <footer class="mt-3 p-4" style="background-color: whitesmoke;">
   <div class="container mt-4 ps-5 pe-5">
     <div class="row">
-      <div class="col">
+      <div class="col-md">
         <h6 class="text-secondary mb-2">FriendLinks</h6>
         <p><a class="link_1" href="https://www.lllxy.net/">LLLXY</a></p>
         <p><a class="link_1" href="https://www.conchbrain.club/#home">ConchBrainClub</a></p>
       </div>
 
-      <div class="col">
+      <div class="col-md">
         <h6 class="text-secondary mb-2">Tool</h6>
         <p><a class="link_1" href="https://www.conchbrain.club/#cloudshell">Linux</a></p>
         <p><a class="link_1" href="http://www.redis.cn/">Redis</a></p>
         <p><a class="link_1" href="https://www.jetbrains.com/phpstorm/">Phpstorm</a></p>
       </div>
 
-      <div class="col">
+      <div class="col-md">
         <h6 class="text-secondary mb-2">Other</h6>
         <p><a class="link_1" href="https://github.com/">Github</a></p>
         <p><a class="link_1" href="https://ckeditor.com/ckeditor-4/demo/">CKEditor</a></p>
         <p><a class="link_1" href="https://v5.bootcss.com/">Bootstrap</a></p>
       </div>
 
-      <div class="col">
+      <div class="col-md">
         <h6 class="text-secondary mb-2">About</h6>
         <div class="row mt-4 mb-3">
           <div class="col">
