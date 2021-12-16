@@ -18,15 +18,15 @@
     <div class="row">
       <div class="col">
         <h6 class="text-secondary mb-2">FriendLinks</h6>
-        <p><a class="link_1" href="https://www.lllxy.net/">lllxy</a></p>
+        <p><a class="link_1" href="https://www.lllxy.net/">LLLXY</a></p>
         <p><a class="link_1" href="https://www.conchbrain.club/#home">ConchBrainClub</a></p>
       </div>
 
       <div class="col">
         <h6 class="text-secondary mb-2">Tool</h6>
-        <p><a class="link_1" href="https://www.conchbrain.club/#cloudshell">linux</a></p>
-        <p><a class="link_1" href="http://www.redis.cn/">redis</a></p>
-        <p><a class="link_1" href="https://www.jetbrains.com/phpstorm/">phpstorm</a></p>
+        <p><a class="link_1" href="https://www.conchbrain.club/#cloudshell">Linux</a></p>
+        <p><a class="link_1" href="http://www.redis.cn/">Redis</a></p>
+        <p><a class="link_1" href="https://www.jetbrains.com/phpstorm/">PHP</a></p>
       </div>
 
       <div class="col">

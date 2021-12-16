@@ -26,7 +26,7 @@
         <h6 class="text-secondary mb-2">Tool</h6>
         <p><a class="link_1" href="https://www.conchbrain.club/#cloudshell">Linux</a></p>
         <p><a class="link_1" href="http://www.redis.cn/">Redis</a></p>
-        <p><a class="link_1" href="https://www.jetbrains.com/phpstorm/">Phpstorm</a></p>
+        <p><a class="link_1" href="https://www.jetbrains.com/phpstorm/">PHP</a></p>
       </div>
 
       <div class="col-md">
