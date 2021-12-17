@@ -24,6 +24,9 @@
   ?>
   
   <div class="container" style="padding-left: 280px;">
+    <div class="row">
+      <h2 class="m-3">Welcome</h2>
+    </div>
 
     <div class="row">
       <div class="calendar m-3">
