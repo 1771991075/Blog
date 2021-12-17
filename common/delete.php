@@ -8,9 +8,9 @@
 
     // 回收类别
     $familyName = "family-".$blog->family;
-    $redis->srem($familyName, $id);
+    $redis->lrem($familyName, $id);
     
-    if ($redis->scard($familyName) == 0) {
+    if ($redis->llen($familyName) == 0) {
         $redis->del($familyName);
         $redis->srem("familylist", $blog->family);
     }
