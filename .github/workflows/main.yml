@@ -20,6 +20,6 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           port: 22
-          user: root
+          user: ${{ secrets.USER }}
           pass: ${{ secrets.PASS }}
           first_ssh: cd ~/Blog && git pull
