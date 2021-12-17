@@ -1,7 +1,9 @@
 <?php 
     session_start();
 
-    if ($_SESSION["account"] != "1771991075@qq.com" && $_SESSION["password"] != "lzcblog") {
+    $settings = json_decode(file_get_contents("../settings.json"));
+
+    if ($_SESSION["account"] != $settings->account && $_SESSION["password"] != $settings->password) {
         header("Location: /admin");
     }
 ?>
