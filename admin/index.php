@@ -8,8 +8,9 @@
     $account = $_POST["email"];
     $password = $_POST["password"];
     
+    $settings = json_decode(file_get_contents("../settings.json"));
 
-    if ($account == "1771991075@qq.com" && $password == "lzcblog") {
+    if ($account == $settings->account && $password == $settings->password) {
         $_SESSION['account'] = $account;
         $_SESSION['password'] = $password;
         header("Location: /admin/overview.php");
