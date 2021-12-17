@@ -8,7 +8,7 @@
     $account = $_POST["email"];
     $password = $_POST["password"];
     
-    $settings = json_decode(file_get_contents("../settings.json"));
+    $settings = json_decode(file_get_contents("../../settings.json"));
 
     if ($account == $settings->account && $password == $settings->password) {
         $_SESSION['account'] = $account;
