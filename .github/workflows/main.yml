@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ssh-scp-ssh-pipelines
+      
+        uses: cross-the-world/ssh-scp-ssh-pipelines@v1.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          port: 22
+          user: root
+          pass: ${{ secrets.PASS }}
+          first_ssh: cd ~/Blog && git pull
