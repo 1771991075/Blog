@@ -47,14 +47,14 @@
 
   <div class="row">
 
-    <div class="col-3">
+    <div class="col-3-md" style="max-width: 18rem;">
       <?php require "../compoments/family.php" ?>
       <?php require "../compoments/archiveDate.php" ?>
     </div>
 
     <!-- $blogs  -->
 
-    <div class="col">
+    <div class="col-lg">
 
       <h1 class="mb-3"><?php echo $keyWord; ?></h1>
       <hr>
