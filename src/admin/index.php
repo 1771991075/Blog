@@ -75,7 +75,7 @@
                 <input type="checkbox" value="remember-me"> Remember me
               </label>
             </div>
-            <input class="w-100 btn btn-lg btn-primary mb-3" type="submit" />
+            <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Login</button>
             <!-- 警告框 -->
             <?php if ($isWarning) { ?>
 
