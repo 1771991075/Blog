@@ -52,8 +52,7 @@
       <div class="col-lg">
         <div class="row">
           <?php $blog = json_decode($redis->get($blogs[0])); ?>
-          <div class="card mb-3">
-            <img src="" class="card-img-top" alt="...">
+          <div class="card mb-3 shadow p-3 bg-body rounded">
             <div class="card-body">
               <h5 class="card-title"><?php echo $blog->title ?></h5>
               <p class="card-text"><?php echo $blog->summary ?></p>
@@ -64,8 +63,7 @@
 
         <div class="row">
           <?php $blog = json_decode($redis->get($blogs[1])); ?>
-          <div class="card mb-3">
-            <img src="" class="card-img-top" alt="...">
+          <div class="card mb-3 shadow p-3 bg-body rounded">
             <div class="card-body">
               <h5 class="card-title"><?php echo $blog->title ?></h5>
               <p class="card-text"><?php echo $blog->summary ?></p>
