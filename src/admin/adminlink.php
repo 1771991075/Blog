@@ -96,7 +96,7 @@ $familys = $redis->smembers("familylist");
 
       </div>
 
-    <div class="col-3">
+    <div class="col-3-lg" style="max-width: 18rem;">
       <?php require "../compoments/adminfamily.php" ?>
       <?php require "../compoments/adminarchiveDate.php" ?>
     </div>

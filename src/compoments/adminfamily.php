@@ -6,7 +6,7 @@ $redis->connect('127.0.0.1', 6379);
 $familys = $redis->smembers("familylist");
 ?>
 
-<div class="card mb-3" style="max-width: 18rem;">
+<div class="card mb-3">
     <div class="card-header">
         <a>
         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
