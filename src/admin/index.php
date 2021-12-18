@@ -45,7 +45,7 @@
       <div class="col">
 
       </div>
-      <div class="col-3">
+      <div class="col-md-3">
         <div class="row">
 
         </div>
@@ -54,7 +54,7 @@
             <img class="mx-auto" src="../static/images/avatar.png" style="height: 100px; width: 100px; border-radius:100%; ">
           </div>
           <!-- 表单 -->
-          <form method="post"  style="max-width: 18rem;">
+          <form method="post">
             <div class="form-floating" style="margin-bottom: 10px;">
               <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
               <label for="floatingInput">
