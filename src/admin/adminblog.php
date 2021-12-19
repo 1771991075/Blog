@@ -59,11 +59,6 @@ $blog = json_decode($redis->get($id));
 
     </div>
 
-    <div class="col-3">
-      <?php require "../compoments/adminfamily.php" ?>
-      <?php require "../compoments/adminarchiveDate.php" ?>
-    </div>
-
   </div>
 
 </div>

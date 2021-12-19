@@ -37,13 +37,11 @@
   ?>
   
   <div class="container" style="padding-left: 280px;">
-    <div class="row pt-3">
-        <h1>Feedback</h1>
-    </div>
-    <hr>
+    
     <div class="row">
+        <h1 class="mb-3 pt-3">Feedback</h1>
+        <hr>
         <div class="textbox" style="border: 1px;color: black; border-radius: 100px; margin-bottom: 10px;">
-            <div class="row">
                 <?php for ($i = 0; $i < count($feedbacks); $i++) { ?>
                 <?php $feedback = json_decode($redis->get($feedbacks[$i])); ?>
                 <div class="card p-0 mb-2">
@@ -69,7 +67,6 @@
                     </div>
                 </div>
                 <?php } ?>
-            </div>
         </div>
     </div>
 
