@@ -12,38 +12,6 @@
 </head>
 
 <body>
-  <?php
-  class feedback
-  {
-    var $email;
-    var $opinion;
-    var $time;
-  }
-
-  $request_method = $_SERVER['REQUEST_METHOD'];
-
-  $redis = new Redis();
-  $redis->connect('127.0.0.1', 6379);
-
-  if ($request_method == "POST") {
-
-    $feedback = new feedback;
-    $feedback->email = $_POST["email"];
-    $feedback->opinion = $_POST["opinion"];
-    $feedback->time = date("Y/m/d H:i:s");
-
-    if ($_POST["email"] == "" || $_POST["opinion"] == "") {
-      echo "<script>
-              alert('内容不完善。')
-              </script>";
-    }
-
-    $redis->lpush("feedbacklist", json_encode($feedback));
-  }
-
-  $feedbacks = $redis->lrange('feedbacklist', 0, -1);
-
-  ?>
 
   <?php require "../compoments/header.php"; ?>
 
@@ -96,6 +64,51 @@
   </div>
 
   <?php require "../compoments/footer.php"; ?>
+  <?php
+  class feedback
+  {
+    var $email;
+    var $opinion;
+    var $time;
+  }
+
+  $request_method = $_SERVER['REQUEST_METHOD'];
+
+  $redis = new Redis();
+  $redis->connect('127.0.0.1', 6379);
+
+  function create_guid()
+  {
+    $charid = strtoupper(md5(uniqid(mt_rand(), true)));
+    $hyphen = chr(45);
+    $uuid = substr($charid, 6, 2) . substr($charid, 4, 2) .
+      substr($charid, 2, 2) . substr($charid, 0, 2) . $hyphen
+      . substr($charid, 10, 2) . substr($charid, 8, 2) . $hyphen
+      . substr($charid, 14, 2) . substr($charid, 12, 2) . $hyphen
+      . substr($charid, 16, 4) . $hyphen . substr($charid, 20, 12);
+    return $uuid;
+  }
+
+  if ($request_method == "POST") {
+
+    $guid = create_guid();
+
+    $feedback = new feedback;
+    $feedback->email = $_POST["email"];
+    $feedback->opinion = $_POST["opinion"];
+    $feedback->time = date("Y/m/d H:i:s");
+
+    if ($_POST["email"] == "" || $_POST["opinion"] == "") {
+      echo "<script>
+              alert('内容不完善。')
+              </script>";
+    }
+
+    $redis->set($guid,json_encode($feedback));
+    $redis->lpush("feedbacklist", $guid);
+  }
+
+  ?>
 
 </body>
 
