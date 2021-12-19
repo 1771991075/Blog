@@ -93,28 +93,6 @@
 
     </div>
     <hr>
-    <div class="textbox" style="border: 1px;color: black; border-radius: 100px; margin-bottom: 10px;">
-      <div class="row">
-        <?php for ($i = 0; $i < count($feedbacks); $i++) { ?>
-          <?php $feedback = json_decode($feedbacks[$i]); ?>
-          <div class="card p-0 mb-2">
-            <h5 class="card-header">
-              <div class="col" style="float: left;">
-                <?php echo $feedback->email ?>
-              </div>
-              <div class="col" style="float: right;">
-                <?php echo $feedback->time ?>
-              </div>
-            </h5>
-            <div class="card-body">
-              <p class="card-text">
-                <?php echo $feedback->opinion ?>
-              </p>
-            </div>
-          </div>
-        <?php } ?>
-      </div>
-    </div>
   </div>
 
   <?php require "../compoments/footer.php"; ?>
