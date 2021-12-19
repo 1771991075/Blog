@@ -82,7 +82,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
                 <p class="card-text"><?php echo $blog->summary ?></p>
-                <a href="/home/blog.php?id=<?php echo $blogs[2] ?>" class="btn btn-primary">Go somewhere</a>
+                <a href="/home/blog.php?id=<?php echo $blogs[2] ?>" class="btn btn-primary">Read more</a>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
                 <p class="card-text"><?php echo $blog->summary ?></p>
-                <a href="/home/blog.php?id=<?php echo $blogs[3] ?>" class="btn btn-primary">Go somewhere</a>
+                <a href="/home/blog.php?id=<?php echo $blogs[3] ?>" class="btn btn-primary">Read more</a>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
                 <p class="card-text"><?php echo $blog->summary ?></p>
-                <a href="/home/blog.php?id=<?php echo $blogs[4] ?>" class="btn btn-primary">Go somewhere</a>
+                <a href="/home/blog.php?id=<?php echo $blogs[4] ?>" class="btn btn-primary">Read more</a>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
                 <p class="card-text"><?php echo $blog->summary ?></p>
-                <a href="/home/blog.php?id=<?php echo $blogs[5] ?>" class="btn btn-primary">Go somewhere</a>
+                <a href="/home/blog.php?id=<?php echo $blogs[5] ?>" class="btn btn-primary">Read more</a>
               </div>
             </div>
           </div>

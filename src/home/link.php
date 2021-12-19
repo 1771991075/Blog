@@ -74,7 +74,7 @@
               <p class="card-text">
                 <?php echo $blog->summary ?>
               </p>
-              <a href="/home/blog.php?id=<?php echo $blogs[$i] ?>" class="btn btn-primary">Go somewhere</a>
+              <a href="/home/blog.php?id=<?php echo $blogs[$i] ?>" class="btn btn-primary">Read more</a>
             </div>
           </div>
         </div>
