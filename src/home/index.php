@@ -48,7 +48,7 @@
   <!-- 内容 -->
   <div class="container pt-5">
 
-    <div class="row">
+    <div class="row px-3">
       <div class="col-lg">
         <div class="row">
           <?php $blog = json_decode($redis->get($blogs[0])); ?>

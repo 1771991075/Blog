@@ -18,8 +18,8 @@
 
     <!-- 内容 -->
     <div class="container" style="margin-bottom: 158px;">
-        <div class="row mt-5 mb-5" style="height: 340px;">
-            <div class="col" style="font-family: 'Times New Roman', Times, serif; font-size: 140px; text-align: right;margin-top: 50px;margin-right: 40px;">
+        <div class="row mt-5 mb-5" style="height: 500px;">
+            <div class="col" style="font-family: 'Times New Roman', Times, serif; font-size: 140px; text-align: right;margin-top: 50px;margin-right: 80px;">
                 <p><b>404</b></p>
             </div>
 

@@ -36,7 +36,7 @@
 
       </div>
 
-      <div class="col-md">
+      <div class="col-md px-4">
         <form method="post">
           <div class="row mt-1 mb-4">
             <input class="form-control" type="email" placeholder="E-mail" aria-label="E-mail example" name="email">

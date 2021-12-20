@@ -54,7 +54,7 @@
 
     <!-- $blogs  -->
 
-    <div class="col-lg">
+    <div class="col-lg px-4">
 
       <h1 class="mb-3"><?php echo $keyWord; ?></h1>
       <hr>
