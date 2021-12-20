@@ -40,7 +40,7 @@
 
   <!-- 背景图 -->
   <div class="container-fulid">
-    <div class="row m-0" style="height: 100vh; background-image: url(/static/images/caihong.jpg);">
+    <div class="row m-0" style="height: 100vh; background-image: url(/static/images/loginbgimage.jpg);">
       <h1 class="mt-5"></h1>
       <div class="col">
 
