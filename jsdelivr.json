@@ -1,0 +1,34 @@
+{
+  "Libraries": [
+    {
+      "Name": "bootstrap",
+      "Version": "5.1.3",
+      "Destination": "src/static/lib"
+    },
+    {
+      "Name": "animate.css",
+      "Version": "4.1.1",
+      "Destination": "src/static/lib"
+    },
+    {
+      "Name": "jquery",
+      "Version": "3.6.0",
+      "Destination": "src/static/lib"
+    },
+    {
+      "Name": "valine",
+      "Version": "1.4.16",
+      "Destination": "src/static/lib"
+    },
+    {
+      "Name": "ckeditor4",
+      "Version": "4.17.1",
+      "Destination": "./src/static/lib"
+    },
+    {
+      "Name": "github-calendar",
+      "Version": "2.2.9",
+      "Destination": "./src/static/lib"
+    }
+  ]
+}

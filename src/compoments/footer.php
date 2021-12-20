@@ -87,5 +87,5 @@
   </svg>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script src="../static/lib/jquery/dist/jquery.min.js" ></script>
 <script src="https://myhkw.cn/api/player/1639315267136" id="myhk" key="1639315267136" m="1"></script>
