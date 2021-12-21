@@ -32,7 +32,7 @@ $blog = json_decode($redis->get($id));
   <!-- 内容 -->
 <div class="container mt-5 pt-4">
   <div class="row">
-    <div class="col-lg-3" style="max-width:18rem;">
+    <div class="col-lg-3" style="max-width:19rem;">
       <?php require "../compoments/family.php" ?>
       <?php require "../compoments/archiveDate.php" ?>
     </div>

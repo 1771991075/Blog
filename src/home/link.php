@@ -47,7 +47,7 @@
 
   <div class="row">
 
-    <div class="col-3-md" style="max-width: 18rem;">
+    <div class="col-3-md" style="max-width: 19rem;">
       <?php require "../compoments/family.php" ?>
       <?php require "../compoments/archiveDate.php" ?>
     </div>
