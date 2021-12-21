@@ -34,7 +34,7 @@
   <div class="container-fulid">
     <a class="an">
       <span>
-        <svg onclick="$('html,body').animate({ scrollTop: 775 }, 500);" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-chevron-compact-down animate__animated animate__bounce animate__slow animate__infinite" viewBox="0 0 16 16">
+        <svg onclick="$('html,body').animate({scrollTop: $('#content').offset().top }, 500);" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-chevron-compact-down animate__animated animate__bounce animate__slow animate__infinite" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
         </svg>
       </span>
@@ -46,9 +46,9 @@
   </div>
 
   <!-- 内容 -->
-  <div class="container pt-5">
+  <div id="content" class="container pt-5">
 
-    <div class="row px-3">
+    <div class="row px-3 mt-3 pt-3">
       <div class="col-lg">
         <div class="row">
           <?php $blog = json_decode($redis->get($blogs[0])); ?>
