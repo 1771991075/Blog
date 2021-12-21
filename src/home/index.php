@@ -76,7 +76,7 @@
       <div class="col-lg">
         <div class="row">
         <?php $blog = json_decode($redis->get($blogs[2])); ?>
-          <div class="col-md-6 mb-1">
+          <div class="col-md-6 mb-3">
             <div class="card">
               <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
               <div class="card-body">
@@ -88,7 +88,7 @@
           </div>
 
           <?php $blog = json_decode($redis->get($blogs[3])); ?>
-          <div class="col-md-6 mb-1">
+          <div class="col-md-6 mb-3">
             <div class="card">
               <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
               <div class="card-body">
@@ -100,7 +100,7 @@
           </div>
 
           <?php $blog = json_decode($redis->get($blogs[4])); ?>
-          <div class="col-md-6 mb-1">
+          <div class="col-md-6 mb-3">
             <div class="card">
               <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
               <div class="card-body">
@@ -112,7 +112,7 @@
           </div>
 
           <?php $blog = json_decode($redis->get($blogs[5])); ?>
-          <div class="col-md-6 mb-1">
+          <div class="col-md-6 mb-3">
             <div class="card">
               <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
               <div class="card-body">
