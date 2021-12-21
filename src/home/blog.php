@@ -20,7 +20,7 @@ $blog = json_decode($redis->get($id));
   <link href="../static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="../static/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../static/lib/valine/dist/Valine.min.js"></script>
-  <script src="../static/js/display.js"></script>
+
   <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
   <link rel="stylesheet" type="text/css" href="../static/css/image.css"/>
 </head>
@@ -68,6 +68,7 @@ $blog = json_decode($redis->get($id));
               path: "<?php echo $id; ?>"
           });
       </script>
+      <script src="../static/js/display.js"></script>
     </div>
 
   </div>
