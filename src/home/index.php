@@ -78,7 +78,7 @@
         <?php $blog = json_decode($redis->get($blogs[2])); ?>
           <div class="col-md-6 mb-3">
             <div class="card">
-              <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
+              <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
                 <p class="card-text"><?php echo $blog->summary ?></p>
@@ -90,7 +90,7 @@
           <?php $blog = json_decode($redis->get($blogs[3])); ?>
           <div class="col-md-6 mb-3">
             <div class="card">
-              <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
+              <img src="../static/images/login.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
                 <p class="card-text"><?php echo $blog->summary ?></p>
@@ -102,7 +102,7 @@
           <?php $blog = json_decode($redis->get($blogs[4])); ?>
           <div class="col-md-6 mb-3">
             <div class="card">
-              <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
+              <img src="../static/images/CKEditor4.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
                 <p class="card-text"><?php echo $blog->summary ?></p>
@@ -114,7 +114,7 @@
           <?php $blog = json_decode($redis->get($blogs[5])); ?>
           <div class="col-md-6 mb-3">
             <div class="card">
-              <img src="https://v5.bootcss.com/docs/5.1/assets/img/bootstrap-icons.png" class="card-img-top" alt="...">
+              <img src="../static/images/Animate.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
                 <p class="card-text"><?php echo $blog->summary ?></p>
