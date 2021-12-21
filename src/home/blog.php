@@ -28,9 +28,9 @@ $blog = json_decode($redis->get($id));
   <?php require "../compoments/header.php"; ?>
 
   <!-- 内容 -->
-<div class="container mt-5 pt-3">
+<div class="container mt-5 pt-4">
   <div class="row">
-    <div class="col-3">
+    <div class="col-3-md" style="max-width: 18rem;">
       <?php require "../compoments/family.php" ?>
     </div>
     <!-- $blogs  -->
