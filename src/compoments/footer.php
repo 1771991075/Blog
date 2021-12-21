@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../static/css/style-an.css" />
+<link rel="stylesheet" href="../static/css/style-link1.css" />
 <script src="../static/lib/jquery/dist/jquery.min.js" ></script>
 
 <!-- 页脚 -->
