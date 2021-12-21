@@ -20,7 +20,9 @@ $blog = json_decode($redis->get($id));
   <link href="../static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="../static/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../static/lib/valine/dist/Valine.min.js"></script>
+  <script src="../static/js/display.js"></script>
   <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/image.css"/>
 </head>
 
 <body>
@@ -30,13 +32,14 @@ $blog = json_decode($redis->get($id));
   <!-- 内容 -->
 <div class="container mt-5 pt-4">
   <div class="row">
-    <div class="col-3-md" style="max-width: 18rem;">
+    <div class="col-lg-3" style="max-width:18rem;">
       <?php require "../compoments/family.php" ?>
+      <?php require "../compoments/archiveDate.php" ?>
     </div>
     <!-- $blogs  -->
 
-    <div class="col">
-      <div class="row mb-2">
+    <div class="col" style="flex-wrap: wrap;">
+      <div class="row mb-2 px-2">
         <div class="card p-0">
           <h5 class="card-header">
             <?php echo $blog->title ?>

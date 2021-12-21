@@ -1,19 +1,9 @@
 <link rel="stylesheet" href="../static/css/style-an.css" />
 <link rel="stylesheet" href="../static/css/style-link1.css" />
 <script src="../static/lib/jquery/dist/jquery.min.js" ></script>
+<script src="../static/js/scroll2Top.js"></script>
 
 <!-- 页脚 -->
-<script>
-  window.onscroll = function(){
-    var btn_top = document.getElementById("scroll2Top");
-    if(window.scrollY > 400){
-        btn_top.removeAttribute("hidden");
-    }
-    else{
-        btn_top.setAttribute("hidden","hidden");
-    }
-  }
-</script>
 
 <footer class="mt-3 p-4" style="background-color: whitesmoke;">
   <div class="container mt-4 pe-5">
