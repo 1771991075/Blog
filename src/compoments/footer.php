@@ -20,22 +20,22 @@
     <div class="row">
       <div class="col-md mb-3">
         <h6 class="text-secondary mb-4" style="font-weight:bold">FriendLinks</h6>
-        <p><a class="link_1 text-secondary" href="https://www.lllxy.net/">LLLXY</a></p>
-        <p><a class="link_1 text-secondary" href="https://www.conchbrain.club/#home">ConchBrainClub</a></p>
+        <p><a class="link_1" href="https://www.lllxy.net/">LLLXY</a></p>
+        <p><a class="link_1" href="https://www.conchbrain.club/#home">ConchBrainClub</a></p>
       </div>
 
       <div class="col-md mb-3">
         <h6 class="text-secondary mb-4" style="font-weight:bold">Tool</h6>
-        <p><a class="link_1 text-secondary" href="https://www.conchbrain.club/#cloudshell">Linux</a></p>
-        <p><a class="link_1 text-secondary" href="http://www.redis.cn/">Redis</a></p>
-        <p><a class="link_1 text-secondary" href="https://www.jetbrains.com/phpstorm/">PHP</a></p>
+        <p><a class="link_1" href="https://www.conchbrain.club/#cloudshell">Linux</a></p>
+        <p><a class="link_1" href="http://www.redis.cn/">Redis</a></p>
+        <p><a class="link_1" href="https://www.jetbrains.com/phpstorm/">PHP</a></p>
       </div>
 
       <div class="col-md mb-3">
         <h6 class="text-secondary mb-4" style="font-weight:bold">Other</h6>
-        <p><a class="link_1 text-secondary" href="https://github.com/">Github</a></p>
-        <p><a class="link_1 text-secondary" href="https://ckeditor.com/ckeditor-4/demo/">CKEditor</a></p>
-        <p><a class="link_1 text-secondary" href="https://v5.bootcss.com/">Bootstrap</a></p>
+        <p><a class="link_1" href="https://github.com/">Github</a></p>
+        <p><a class="link_1" href="https://ckeditor.com/ckeditor-4/demo/">CKEditor</a></p>
+        <p><a class="link_1" href="https://v5.bootcss.com/">Bootstrap</a></p>
       </div>
 
       <div class="col-md mb-3">
