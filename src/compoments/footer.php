@@ -15,7 +15,7 @@
 </script>
 
 <footer class="mt-3 p-4" style="background-color: whitesmoke;">
-  <div class="container mt-4 ps-5 pe-5">
+  <div class="container mt-4 pe-5">
     <div class="row">
       <div class="col-md">
         <h6 class="text-secondary mb-4" style="font-weight:bold">FriendLinks</h6>
@@ -76,7 +76,7 @@
 
     <div class="row pt-5">
       <div class="col text-center">
-        <p class="mx-auto">&copy; 2021-Navbar</p>
+        <p class="mx-auto">&copy; 2021-LZC</p>
       </div>
     </div>
   </div>
