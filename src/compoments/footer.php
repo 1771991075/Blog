@@ -17,27 +17,27 @@
 <footer class="mt-3 p-4" style="background-color: whitesmoke;">
   <div class="container mt-4 pe-5">
     <div class="row">
-      <div class="col-md">
+      <div class="col-md mb-3">
         <h6 class="text-secondary mb-4" style="font-weight:bold">FriendLinks</h6>
         <p><a class="link_1 text-secondary" href="https://www.lllxy.net/">LLLXY</a></p>
         <p><a class="link_1 text-secondary" href="https://www.conchbrain.club/#home">ConchBrainClub</a></p>
       </div>
 
-      <div class="col-md">
+      <div class="col-md mb-3">
         <h6 class="text-secondary mb-4" style="font-weight:bold">Tool</h6>
         <p><a class="link_1 text-secondary" href="https://www.conchbrain.club/#cloudshell">Linux</a></p>
         <p><a class="link_1 text-secondary" href="http://www.redis.cn/">Redis</a></p>
         <p><a class="link_1 text-secondary" href="https://www.jetbrains.com/phpstorm/">PHP</a></p>
       </div>
 
-      <div class="col-md">
+      <div class="col-md mb-3">
         <h6 class="text-secondary mb-4" style="font-weight:bold">Other</h6>
         <p><a class="link_1 text-secondary" href="https://github.com/">Github</a></p>
         <p><a class="link_1 text-secondary" href="https://ckeditor.com/ckeditor-4/demo/">CKEditor</a></p>
         <p><a class="link_1 text-secondary" href="https://v5.bootcss.com/">Bootstrap</a></p>
       </div>
 
-      <div class="col-md">
+      <div class="col-md mb-3">
         <h6 class="text-secondary mb-4" style="font-weight:bold">About</h6>
         <div class="row mt-4 mb-3">
           <div class="col mb-2">
@@ -74,9 +74,9 @@
       </div>
     </div>
 
-    <div class="row pt-5">
+    <div class="row pt-3">
       <div class="col text-center">
-        <p class="mx-auto">&copy; 2021-LZC</p>
+        <p class="mx-auto">&copy; 2021&nbsp;-&nbsp;LZC</p>
       </div>
     </div>
   </div>
