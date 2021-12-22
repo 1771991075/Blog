@@ -52,7 +52,7 @@
       <div class="col-lg">
         <div class="row">
           <?php $blog = json_decode($redis->get($blogs[0])); ?>
-          <div class="card mb-3 shadow p-3 bg-body rounded">
+          <div class="blog card mb-3 p-3" onclick="location.href='/home/blog.php?id=<?php echo $blogs[0] ?>'">
             <div class="card-body">
               <h5 class="card-title"><?php echo $blog->title ?></h5>
               <p class="card-text"><?php echo $blog->summary ?></p>
@@ -63,7 +63,7 @@
 
         <div class="row">
           <?php $blog = json_decode($redis->get($blogs[1])); ?>
-          <div class="card mb-3 shadow p-3 bg-body rounded">
+          <div class="blog card mb-3 p-3" onclick="location.href='/home/blog.php?id=<?php echo $blogs[1] ?>'">
             <div class="card-body">
               <h5 class="card-title"><?php echo $blog->title ?></h5>
               <p class="card-text"><?php echo $blog->summary ?></p>
@@ -77,7 +77,7 @@
         <div class="row">
         <?php $blog = json_decode($redis->get($blogs[2])); ?>
           <div class="col-md-6 mb-3">
-            <div class="card">
+            <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[2] ?>'">
               <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
@@ -89,7 +89,7 @@
 
           <?php $blog = json_decode($redis->get($blogs[3])); ?>
           <div class="col-md-6 mb-3">
-            <div class="card">
+            <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[3] ?>'">
               <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
@@ -101,7 +101,7 @@
 
           <?php $blog = json_decode($redis->get($blogs[4])); ?>
           <div class="col-md-6 mb-3">
-            <div class="card">
+            <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[4] ?>'">
               <img src="../static/images/Animate.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
@@ -113,7 +113,7 @@
 
           <?php $blog = json_decode($redis->get($blogs[5])); ?>
           <div class="col-md-6 mb-3">
-            <div class="card">
+            <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[5] ?>'">
               <img src="../static/images/Animate.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $blog->title ?></h5>
