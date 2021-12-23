@@ -33,7 +33,7 @@
   <!-- 内容 -->
   <div class="container" style="padding-left: 280px;">
     
-    <div class="row">
+    <div class="row mx-2">
       <h1 class="mb-3 pt-3">Alter Blog</h1>
       <hr>
       <form method="post" enctype="multipart/form-data">

@@ -22,7 +22,7 @@
     require "../compoments/adminheader.php"; 
   ?>
   
-  <div class="container" style="padding-left: 280px;">
+  <div class="container">
     <div class="row">
       <h1 class="m-3 ps-0">Welcome !</h1>
       <hr>
@@ -40,5 +40,4 @@
     GitHubCalendar(".calendar", "1771991075", { responsive: true });
   </script>
 </body>
-
 </html>

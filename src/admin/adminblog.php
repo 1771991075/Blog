@@ -22,6 +22,7 @@ $blog = json_decode($redis->get($id));
   <link href="../static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="../static/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/image.css"/>
 </head>
 
 <body>
@@ -33,7 +34,7 @@ $blog = json_decode($redis->get($id));
 
   <!-- 内容 -->
 <div class="container pt-3" style="padding-left: 280px;">
-  <div class="row">
+  <div class="row mx-2">
     <!-- $blogs  -->
 
     <div class="col">

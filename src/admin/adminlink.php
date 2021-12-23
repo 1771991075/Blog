@@ -56,7 +56,7 @@ $familys = $redis->smembers("familylist");
     <h1 class="mb-3"><?php echo $keyWord; ?></h1>
     <hr>
     <!-- $blogs  -->
-    <div class="col">
+    <div class="col mx-2">
 
       <?php for ($i = 0; $i < count($blogs); $i++) { ?>
         <?php $blog = json_decode($redis->get($blogs[$i])); ?>
