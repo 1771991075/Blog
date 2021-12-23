@@ -43,15 +43,15 @@
             <input name="time" type="hidden" value="<?php echo $blog->time ?>" />
 
             <label class="form-label">Title</label>
-            <input name="title" type="text" value="<?php echo $blog->title ?>" class="form-control">
+            <input name="title" type="text" value="<?php echo $blog->title ?>" class="form-control"  style="width:270px">
           </div>
           <div class="mb-2">
             <label class="form-label">Family</label>
-            <input name="family" type="text" readonly value="<?php echo $blog->family ?>" class="form-control">
+            <input name="family" type="text" readonly value="<?php echo $blog->family ?>" class="form-control"  style="width:270px">
           </div>
           <div class="mb-2">
             <label class="form-label">Summary</label>
-            <input name="summary" type="text"  value="<?php echo $blog->summary ?>" class="form-control">
+            <input name="summary" type="text"  value="<?php echo $blog->summary ?>" class="form-control"  style="width:270px">
           </div>
         </div>
         <div class="row-12">

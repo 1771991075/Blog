@@ -31,15 +31,15 @@
         <div class="col-2">
           <div class="mb-2">
             <label class="form-label">Title</label>
-            <input name="title" type="text" class="form-control">
+            <input name="title" type="text" class="form-control" style="width:270px">
           </div>
           <div class="mb-2">
             <label class="form-label">Family</label>
-            <input name="family" type="text" class="form-control">
+            <input name="family" type="text" class="form-control" style="width:270px">
           </div>
           <div class="mb-2">
             <label class="form-label">Summary</label>
-            <input name="summary" type="text" class="form-control">
+            <input name="summary" type="text" class="form-control" style="width:270px">
           </div>
         </div>
         <div class="row-12 mt-2">
