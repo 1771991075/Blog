@@ -28,7 +28,7 @@
       <hr>
     </div>
 
-    <div class="row">
+    <div class="row mx-2" style="width:100%">
       <div class="calendar">
         Loading the data just for you.
       </div>

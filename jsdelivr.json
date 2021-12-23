@@ -21,11 +21,6 @@
       "Destination": "src/static/lib"
     },
     {
-      "Name": "ckeditor4",
-      "Version": "4.17.1",
-      "Destination": "./src/static/lib"
-    },
-    {
       "Name": "github-calendar",
       "Version": "2.2.9",
       "Destination": "./src/static/lib"

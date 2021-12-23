@@ -17,7 +17,7 @@
     ?>
 
     <div style="padding-left:280px; height: 100vh;">
-        <iframe src="<?php echo $subPageHref; ?>" style="height: 100%; width: 100%"></iframe>
+        <iframe src="<?php echo $subPageHref; ?>" style="height: 100vh; width: 100%"></iframe>
     </div>
 
 </body>

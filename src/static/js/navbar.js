@@ -15,5 +15,3 @@ function changeDisplayState(){
 
 window.onresize = changeDisplayState;
 window.onload = changeDisplayState;
-
-

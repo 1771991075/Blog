@@ -10,7 +10,7 @@
   <title>Publish Blog</title>
   <link href="../static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="../static/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../static/lib/ckeditor4/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
   <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
 </head>
 
