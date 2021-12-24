@@ -48,11 +48,14 @@
   <!-- 内容 -->
   <div id="content" class="container pt-5">
 
-    <div class="row px-3 mt-3 pt-3">
-      <div class="col-lg">
-        <div class="row">
+    <div class="row-lg px-3 mt-3 pt-3">
+      <div class="blog mx-auto card mb-3 p-3" onclick="location.href='/home/blog.php?id=<?php echo $blogs[0] ?>'">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../static/images/dahai.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
           <?php $blog = json_decode($redis->get($blogs[0])); ?>
-          <div class="blog card mb-3 p-3" onclick="location.href='/home/blog.php?id=<?php echo $blogs[0] ?>'">
             <div class="card-body">
               <h5 class="card-title"><?php echo $blog->title ?></h5>
               <p class="card-text"><?php echo $blog->summary ?></p>
@@ -60,73 +63,70 @@
             </div>
           </div>
         </div>
-
-        <div class="row">
-          <?php $blog = json_decode($redis->get($blogs[1])); ?>
-          <div class="blog card mb-3 p-3" onclick="location.href='/home/blog.php?id=<?php echo $blogs[1] ?>'">
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $blog->title ?></h5>
-              <p class="card-text"><?php echo $blog->summary ?></p>
-              <p class="card-text"><small class="text-muted"><?php echo $blog->time ?></small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg">
-        <div class="row">
-        <?php $blog = json_decode($redis->get($blogs[2])); ?>
-          <div class="col-md-6 mb-3">
-            <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[2] ?>'">
-              <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title"><?php echo $blog->title ?></h5>
-                <p class="card-text"><?php echo $blog->summary ?></p>
-                <a href="/home/blog.php?id=<?php echo $blogs[2] ?>" class="btn btn-primary">Read more</a>
-              </div>
-            </div>
-          </div>
-
-          <?php $blog = json_decode($redis->get($blogs[3])); ?>
-          <div class="col-md-6 mb-3">
-            <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[3] ?>'">
-              <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title"><?php echo $blog->title ?></h5>
-                <p class="card-text"><?php echo $blog->summary ?></p>
-                <a href="/home/blog.php?id=<?php echo $blogs[3] ?>" class="btn btn-primary">Read more</a>
-              </div>
-            </div>
-          </div>
-
-          <?php $blog = json_decode($redis->get($blogs[4])); ?>
-          <div class="col-md-6 mb-3">
-            <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[4] ?>'">
-              <img src="../static/images/Animate.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title"><?php echo $blog->title ?></h5>
-                <p class="card-text"><?php echo $blog->summary ?></p>
-                <a href="/home/blog.php?id=<?php echo $blogs[4] ?>" class="btn btn-primary">Read more</a>
-              </div>
-            </div>
-          </div>
-
-          <?php $blog = json_decode($redis->get($blogs[5])); ?>
-          <div class="col-md-6 mb-3">
-            <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[5] ?>'">
-              <img src="../static/images/Animate.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title"><?php echo $blog->title ?></h5>
-                <p class="card-text"><?php echo $blog->summary ?></p>
-                <a href="/home/blog.php?id=<?php echo $blogs[5] ?>" class="btn btn-primary">Read more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
-  </div>
+
+    <div class="row-lg px-3 mt-3 pt-3">
+      <div class="blog mx-auto card mb-3 p-3" onclick="location.href='/home/blog.php?id=<?php echo $blogs[1] ?>'">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../static/images/dahai.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+          <?php $blog = json_decode($redis->get($blogs[1])); ?>
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $blog->title ?></h5>
+              <p class="card-text"><?php echo $blog->summary ?></p>
+              <p class="card-text"><small class="text-muted"><?php echo $blog->time ?></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+    <div class="row-lg my-4 text-center">
+      <h1>New Blogs</h1>
+    </div>
+
+    <div class="row">
+      <?php $blog = json_decode($redis->get($blogs[2])); ?>
+        <div class="col-md-4 mb-3">
+          <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[2] ?>'">
+            <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $blog->title ?></h5>
+              <p class="card-text"><?php echo $blog->summary ?></p>
+              <a href="/home/blog.php?id=<?php echo $blogs[2] ?>" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+
+        <?php $blog = json_decode($redis->get($blogs[3])); ?>
+        <div class="col-md-4 mb-3">
+          <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[3] ?>'">
+            <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $blog->title ?></h5>
+              <p class="card-text"><?php echo $blog->summary ?></p>
+              <a href="/home/blog.php?id=<?php echo $blogs[3] ?>" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+
+        <?php $blog = json_decode($redis->get($blogs[3])); ?>
+        <div class="col-md-4 mb-3">
+          <div class="blog card" onclick="location.href='/home/blog.php?id=<?php echo $blogs[3] ?>'">
+            <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $blog->title ?></h5>
+              <p class="card-text"><?php echo $blog->summary ?></p>
+              <a href="/home/blog.php?id=<?php echo $blogs[3] ?>" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+
+    </div>
 
   </div>
 
