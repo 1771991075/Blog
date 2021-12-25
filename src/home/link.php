@@ -14,27 +14,39 @@
 <body>
 
 <?php
-
     require "../models/model.php";
+    require "../common/pagination.php";
 
+    global $redis;
     $redis = new Redis();
     $redis->connect('127.0.0.1', 6379);
 
     $familyName = $_GET["family"];
     $archiveDate = $_GET["archiveDate"];
+    $pageIndex = $_GET["page"];
+
+    global $pageCount;
+    $pageCount = 10;
+
+    if ($pageIndex == "") {
+      $pageIndex = 1;
+    }
 
     $keyWord = "All Blogs";
     
     if ($familyName != "") {
       $keyWord = $familyName;
-      $blogs = $redis->lrange("family-" . $familyName,0,-1);
+      $startIndex = (correctPageIndex($pageIndex, "family-" . $familyName) - 1) * $pageCount;
+      $blogs = $redis->lrange("family-" . $familyName, $startIndex, $startIndex + $pageCount - 1);
     }
     else if($archiveDate != "") {
       $keyWord = $archiveDate;
-      $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
+      $startIndex = (correctPageIndex($pageIndex, "archive-" . $archiveDate) - 1) * $pageCount;
+      $blogs = $redis->lrange("archive-" . $archiveDate, $startIndex, $startIndex + $pageCount - 1);
     }
     else {
-      $blogs = $redis->lrange('bloglist',0,-1);
+      $startIndex = (correctPageIndex($pageIndex, "bloglist") - 1) * $pageCount;
+      $blogs = $redis->lrange('bloglist', $startIndex, $startIndex + $pageCount - 1);
     }
 
     $familys = $redis->smembers("familylist");
