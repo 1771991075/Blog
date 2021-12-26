@@ -89,7 +89,7 @@
       <h1>New Blogs</h1>
     </div>
 
-    <div class="row">
+    <div class="row px-3">
       <?php $blog = json_decode($redis->get($blogs[2])); ?>
         <div class="col-md-4 mb-3">
           <div class="blog1 card">
