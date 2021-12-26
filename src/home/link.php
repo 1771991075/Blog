@@ -63,64 +63,66 @@
   <!-- 内容 -->
   <div class="container mt-5 pt-4">
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-3-md" style="max-width: 19rem;">
-      <?php require "../compoments/family.php" ?>
-      <?php require "../compoments/archiveDate.php" ?>
-    </div>
+      <div class="col-3-md" style="max-width: 19rem;">
+        <?php require "../compoments/family.php" ?>
+        <?php require "../compoments/archiveDate.php" ?>
+      </div>
 
-    <!-- $blogs  -->
+      <!-- $blogs  -->
 
-    <div class="col-lg px-4">
+      <div class="col-lg px-4">
 
-      <h1 class="mb-3"><?php echo $keyWord; ?></h1>
-      <hr>
+        <h1 class="mb-3"><?php echo $keyWord; ?></h1>
+        <hr>
+        
+        <?php for ($i = 0; $i < count($blogs); $i++) { ?>
+          <?php $blog = json_decode($redis->get($blogs[$i])); ?>
 
-      <?php $nowPageIndex = correctPageIndex($pageIndex, "bloglist")?>
-      <?php for ($i = 0; $i < count($blogs); $i++) { ?>
-        <?php $blog = json_decode($redis->get($blogs[$i])); ?>
-
-        <div class="row mb-2">
-          <div class="card p-0">
-            <h5 class="card-header">
-              <?php echo $blog->title ?>
-            </h5>
-            <div class="card-body">
-              <p class="card-title">
-                <?php echo $blog->time ?> | <?php echo $blog->family ?>
-              </p>
-              <p class="card-text">
-                <?php echo $blog->summary ?>
-              </p>
-              <a href="/home/blog.php?id=<?php echo $blogs[$i] ?>" class="btn btn-primary">Read more</a>
+          <div class="row mb-2">
+            <div class="card p-0">
+              <h5 class="card-header">
+                <?php echo $blog->title ?>
+              </h5>
+              <div class="card-body">
+                <p class="card-title">
+                  <?php echo $blog->time ?> | <?php echo $blog->family ?>
+                </p>
+                <p class="card-text">
+                  <?php echo $blog->summary ?>
+                </p>
+                <a href="/home/blog.php?id=<?php echo $blogs[$i] ?>" class="btn btn-primary">Read more</a>
+              </div>
             </div>
           </div>
+        <?php } ?>
+
+        <?php $nowPageIndex = correctPageIndex($pageIndex, $pageTag); ?>
+
+        <div class="row-lg" style="float:right">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item" <?php if($nowPageIndex < 2){echo "hidden='hidden'";}?>>
+                <a class="page-link" href="<?php echo $link ?>page=<?php echo $nowPageIndex - 1 ?>" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <?php for ($i=1; $i <= getIndexCount($pageTag); $i++) { ?>
+                <li class="page-item <?php if ($i == $nowPageIndex) { echo "active"; } ?>"><a class="page-link" href="<?php echo $link ?>page=<?php echo $i ?>"><?php echo $i ?></a></li>
+              <?php } ?>
+              <li class="page-item" <?php if($nowPageIndex >= getIndexCount($pageTag)){echo "hidden='hidden'";}?>>
+                <a class="page-link" href="<?php echo $link ?>page=<?php echo $nowPageIndex + 1 ?>" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      <?php } ?>
-      <div class="row-lg" style="float:right">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item" <?php if($nowPageIndex < 2){echo "hidden='hidden'";}?>>
-              <a class="page-link" href="<?php echo $link ?>page=<?php $nowPageIndex - 1 ?>" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <?php for ($i=1; $i <= getIndexCount($pageTag); $i++) { ?>
-              <li class="page-item <?php if ($i == $nowPageIndex) { echo "active"; } ?>"><a class="page-link" href="<?php echo $link ?>page=<?php echo $i ?>"><?php echo $i ?></a></li>
-            <?php } ?>
-            <li class="page-item" <?php if($nowPageIndex >= getIndexCount($pageTag)){echo "hidden='hidden'";}?>>
-              <a class="page-link" href="<?php echo $link ?>page=<?php echo $nowPageIndex + 1 ?>" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+
       </div>
 
     </div>
-
-  </div>
 
   </div>
 
