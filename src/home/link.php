@@ -24,9 +24,11 @@
     $familyName = $_GET["family"];
     $archiveDate = $_GET["archiveDate"];
     $pageIndex = $_GET["page"];
+    $link = "/home/link.php?";
+    $pageTag = "bloglist";
 
     global $pageCount;
-    $pageCount = 10;
+    $pageCount = 1;
 
     if ($pageIndex == "") {
       $pageIndex = 1;
@@ -36,13 +38,17 @@
     
     if ($familyName != "") {
       $keyWord = $familyName;
-      $startIndex = (correctPageIndex($pageIndex, "family-" . $familyName) - 1) * $pageCount;
+      $pageTag = "family-" . $familyName;
+      $startIndex = (correctPageIndex($pageIndex, $pageTag) - 1) * $pageCount;
       $blogs = $redis->lrange("family-" . $familyName, $startIndex, $startIndex + $pageCount - 1);
+      $link = "/home/link.php?family=".$familyName."&";
     }
     else if($archiveDate != "") {
       $keyWord = $archiveDate;
-      $startIndex = (correctPageIndex($pageIndex, "archive-" . $archiveDate) - 1) * $pageCount;
+      $pageTag = "archive-" . $archiveDate;
+      $startIndex = (correctPageIndex($pageIndex, $pageTag) - 1) * $pageCount;
       $blogs = $redis->lrange("archive-" . $archiveDate, $startIndex, $startIndex + $pageCount - 1);
+      $link = "/home/link.php?archiveDate=".$archiveDate."&";
     }
     else {
       $startIndex = (correctPageIndex($pageIndex, "bloglist") - 1) * $pageCount;
@@ -71,6 +77,7 @@
       <h1 class="mb-3"><?php echo $keyWord; ?></h1>
       <hr>
 
+      <?php $nowPageIndex = correctPageIndex($pageIndex, "bloglist")?>
       <?php for ($i = 0; $i < count($blogs); $i++) { ?>
         <?php $blog = json_decode($redis->get($blogs[$i])); ?>
 
@@ -90,9 +97,26 @@
             </div>
           </div>
         </div>
-
       <?php } ?>
-
+      <div class="row-lg" style="float:right">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item" <?php if($nowPageIndex < 2){echo "hidden='hidden'";}?>>
+              <a class="page-link" href="<?php echo $link ?>page=<?php $nowPageIndex - 1 ?>" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <?php for ($i=1; $i <= getIndexCount($pageTag); $i++) { ?>
+              <li class="page-item <?php if ($i == $nowPageIndex) { echo "active"; } ?>"><a class="page-link" href="<?php echo $link ?>page=<?php echo $i ?>"><?php echo $i ?></a></li>
+            <?php } ?>
+            <li class="page-item" <?php if($nowPageIndex >= getIndexCount($pageTag)){echo "hidden='hidden'";}?>>
+              <a class="page-link" href="<?php echo $link ?>page=<?php echo $nowPageIndex + 1 ?>" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
     </div>
 

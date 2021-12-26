@@ -4,12 +4,16 @@ function correctPageIndex($index, $tag) {
         $index = 1;
     }
     
-    $blogCount = $GLOBALS["redis"]->llen($tag);
-    $indexCount = ceil($blogCount / $GLOBALS["pageCount"]);
-
+    $indexCount = getIndexCount($tag);
     if($index > $indexCount) {
         $index = $indexCount;
     }
 
     return $index;
+}
+
+function getIndexCount($tag) {
+    $blogCount = $GLOBALS["redis"]->llen($tag);
+    $indexCount = ceil($blogCount / $GLOBALS["pageCount"]);
+    return $indexCount;
 }
