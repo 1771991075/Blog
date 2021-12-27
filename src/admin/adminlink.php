@@ -17,30 +17,48 @@
 
 <?php
 
-require "../models/model.php";
+  require "../models/model.php";
+  require "../common/pagination.php";
 
-$redis = new Redis();
-$redis->connect('127.0.0.1', 6379);
+  global $redis;
+  $redis = new Redis();
+  $redis->connect('127.0.0.1', 6379);
 
-$familyName = $_GET["family"];
-$archiveDate = $_GET["archiveDate"];
+  $familyName = $_GET["family"];
+  $archiveDate = $_GET["archiveDate"];
+  $pageIndex = $_GET["page"];
+  $link = "/admin/adminlink.php?";
+  $pageTag = "bloglist";
 
-$keyWord = "All Blogs";
+  global $pageCount;
+  $pageCount = 2;
 
-if ($familyName != "") {
-  $keyWord = $familyName;
-  $blogs = $redis->lrange("family-" . $familyName,0,-1);
-} 
-else if($archiveDate != "") {
-  $keyWord = $archiveDate;
-  $blogs = $redis->lrange("archive-" . $archiveDate,0,-1);
-}
-else {
-  $blogs = $redis->lrange('bloglist',0,-1);
-}
+  if ($pageIndex == "") {
+    $pageIndex = 1;
+  }
 
-$familys = $redis->smembers("familylist");
+  $keyWord = "All Blogs";
 
+  if ($familyName != "") {
+    $keyWord = $familyName;
+    $pageTag = "family-" . $familyName;
+    $startIndex = (correctPageIndex($pageIndex, $pageTag) - 1) * $pageCount;
+    $blogs = $redis->lrange("family-" . $familyName, $startIndex, $startIndex + $pageCount - 1);
+    $link = "/home/link.php?family=".$familyName."&";
+  }
+  else if($archiveDate != "") {
+    $keyWord = $archiveDate;
+    $pageTag = "archive-" . $archiveDate;
+    $startIndex = (correctPageIndex($pageIndex, $pageTag) - 1) * $pageCount;
+    $blogs = $redis->lrange("archive-" . $archiveDate, $startIndex, $startIndex + $pageCount - 1);
+    $link = "/home/link.php?archiveDate=".$archiveDate."&";
+  }
+  else {
+    $startIndex = (correctPageIndex($pageIndex, "bloglist") - 1) * $pageCount;
+    $blogs = $redis->lrange('bloglist', $startIndex, $startIndex + $pageCount - 1);
+  }
+
+  $familys = $redis->smembers("familylist");
 ?>
 
 <?php 
@@ -93,6 +111,28 @@ $familys = $redis->smembers("familylist");
           </div>
         </div>
       <?php } ?>
+
+      <?php $nowPageIndex = correctPageIndex($pageIndex, $pageTag); ?>
+
+        <div class="row-lg" style="float:right">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item" <?php if($nowPageIndex < 2){echo "hidden='hidden'";}?>>
+                <a class="page-link" href="<?php echo $link ?>page=<?php echo $nowPageIndex - 1 ?>" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <?php for ($i=1; $i <= getIndexCount($pageTag); $i++) { ?>
+                <li class="page-item <?php if ($i == $nowPageIndex) { echo "active"; } ?>"><a class="page-link" href="<?php echo $link ?>page=<?php echo $i ?>"><?php echo $i ?></a></li>
+              <?php } ?>
+              <li class="page-item" <?php if($nowPageIndex >= getIndexCount($pageTag)){echo "hidden='hidden'";}?>>
+                <a class="page-link" href="<?php echo $link ?>page=<?php echo $nowPageIndex + 1 ?>" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
     </div>
 
