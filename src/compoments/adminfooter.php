@@ -68,7 +68,7 @@
 
     <div class="row pt-4">
       <div class="col text-center">
-        <p class="mx-auto">&copy; 2021-Navbar</p>
+        <p class="mx-auto">&copy; 2022-LZC</p>
       </div>
     </div>
   </div>
