@@ -11,3 +11,17 @@
     text-decoration-line: none;
     color:#81898f;
 }
+
+.link_2:hover {
+    color: rgb(6, 156, 206);
+}
+
+.link_2:hover {
+    text-decoration-line: underline;
+}
+
+.link_2 {
+    text-decoration-line: none;
+    color:#81898f;
+    font-weight: bold;
+}

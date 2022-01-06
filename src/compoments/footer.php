@@ -67,7 +67,7 @@
 
     <div class="row pt-3">
       <div class="col text-center">
-        <p class="mx-auto">&copy; 2022&nbsp;-&nbsp;LZC</p>
+        <p class="mx-auto">&copy; 2022&nbsp;-&nbsp;LZC&nbsp;<a class="link_2" href="https://beian.miit.gov.cn">豫ICP备2022000400号</a></p>
       </div>
     </div>
   </div>
