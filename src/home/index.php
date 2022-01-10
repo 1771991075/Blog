@@ -52,7 +52,7 @@
       <div class="blog mx-auto card mb-3 p-3" onclick="location.href='/home/blog.php?id=<?php echo $blogs[0] ?>'">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="../static/images/dahai.jpg" class="img-fluid rounded-start" alt="...">
+            <img src="../static/images/blogimage/blog1.png" class="img-fluid rounded-start" alt="...">
           </div>
           <div class="col-md-8">
           <?php $blog = json_decode($redis->get($blogs[0])); ?>
@@ -70,7 +70,7 @@
       <div class="blog mx-auto card mb-3 p-3" onclick="location.href='/home/blog.php?id=<?php echo $blogs[1] ?>'">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="../static/images/dahai.jpg" class="img-fluid rounded-start" alt="...">
+            <img src="../static/images/blogimage/blog2.png" class="img-fluid rounded-start" alt="...">
           </div>
           <div class="col-md-8">
           <?php $blog = json_decode($redis->get($blogs[1])); ?>
