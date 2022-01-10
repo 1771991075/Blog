@@ -93,7 +93,7 @@
       <?php $blog = json_decode($redis->get($blogs[2])); ?>
         <div class="col-md-4 mb-3">
           <div class="blog1 card">
-            <img src="../static/images/BootStrap.png" class="card-img-top" alt="...">
+            <img src="../static/images/blogimage/blog3.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><?php echo $blog->title ?></h5>
               <p class="card-text"><?php echo $blog->summary ?></p>
