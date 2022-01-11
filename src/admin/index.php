@@ -66,7 +66,7 @@
             
             <div class="mb-3 mx-3 text-center">
               <label for="exampleInputPassword1" class="form-label mb-4" style="color:white;">lvzicong123@outlook.com</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+              <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
             </div>
 
             <!-- <div class="checkbox mb-3">
