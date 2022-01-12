@@ -49,14 +49,13 @@
   <!-- 背景图 -->
   <div class="container-fulid">
     <div class="row m-0" style="height: 100vh; background-image: url(/static/images/loginbgimage.jpg);">
-      <h1 class="mt-5"></h1>
+      
       <div class="col">
 
       </div>
-      <div class="col-md-3">
-        <div class="row">
 
-        </div>
+      <div class="col-md-3" style="margin:auto;">
+        
         <div class="row" style="background-color: rgba(0, 0, 0, 0.4); border: none;padding-left: 15px; padding-right: 15px;">
           <div class="col text-center" style="margin-top: 15px; margin-bottom: 30px;">
             <img class="mx-auto" src="../static/images/avatar.png" style="height: 70px; width: 70px; border-radius:100%; ">
@@ -93,10 +92,9 @@
 
           </form>
         </div>
-        <div class="row">
-
-        </div>
+        
       </div>
+      
       <div class="col">
 
       </div>
