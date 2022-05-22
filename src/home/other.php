@@ -28,7 +28,7 @@
                     <h3>Page not found...</h3>
                     <p>We're sorry, but we can't find the page you were looking for. It's probably some thing we've done wrong but now we know about it we'll try to fix it. In the meantime, try one of this options:</p>
                     <li style="margin-right: 20px; margin-bottom: 10px;">
-                        <a href="index.html" class="link_1 ">
+                        <a href="index.php" class="link_1 ">
                             Go back to Home
                         </a>
                     </li>
