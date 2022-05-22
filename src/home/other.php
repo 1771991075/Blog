@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li style="margin-right: 20px;">
-                        <a href="Link.html" class="link_1 ">
+                        <a href="link.php" class="link_1 ">
                             Go back to Link
                         </a>
                     </li>
