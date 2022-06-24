@@ -31,7 +31,7 @@
   $pageTag = "bloglist";
 
   global $pageCount;
-  $pageCount = 2;
+  $pageCount = 3;
 
   if ($pageIndex == "") {
     $pageIndex = 1;

@@ -19,7 +19,7 @@ $blog = json_decode($redis->get($id));
   <title>My Blog</title>
   <link href="../static/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="../static/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../static/lib/valine/dist/Valine.min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="../static/css/style-link1.css"/>
   <link rel="stylesheet" type="text/css" href="../static/css/image.css"/>
