@@ -85,7 +85,7 @@
                   <use xlink:href="#exclamation-triangle-fill" />
                 </svg>
                 <div>
-                  Password input error!
+                  Password input error!!!
                 </div>
               </div>
             <?php } ?>
